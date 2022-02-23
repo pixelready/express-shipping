@@ -15,7 +15,7 @@ const {shipProduct} = require("../shipItApi");
  *
  * Returns { shipped: shipId }
  */
-
+// TODO: check for req.body is undefined
 router.post("/", async function (req, res, next) {
   const result = jsonschema.validate(req.body, shipmentSchema);
   if (!result.valid) {
